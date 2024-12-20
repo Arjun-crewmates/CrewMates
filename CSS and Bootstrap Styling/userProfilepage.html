@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <section class="border p-4 rounded">
+            <h2>Personal Information</h2>
+            <p><strong>Username:</strong> john_doe</p>
+            <p><strong>Email:</strong> john_doe@example.com</p>
+        </section>
+        <section class="border p-4 rounded mt-4">
+            <h2>Account Settings</h2>
+            <form action="/update-profile" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" value="john_doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">New Password:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm New Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+            </form>
+        </section>
+    </main>
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Currency Converter</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
