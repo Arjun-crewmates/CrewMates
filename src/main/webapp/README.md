@@ -40,7 +40,7 @@ The `index.jsp` page serves as the main entry point for the application. It allo
 </body>
 </html>
 ```
-#### result.jsp
+### result.jsp
 The result.jsp page displays the results of the currency conversion. It shows the original and converted amounts, along with the currency codes.
 
 **Location:** `src/main/webapp/result.jsp`
@@ -64,8 +64,8 @@ The result.jsp page displays the results of the currency conversion. It shows th
 </body>
 </html>
 ```
-##### Explanation of JSP Pages
-index.jsp
+## Explanation of JSP Pages
+### index.jsp
 
 Form Inputs: The page includes form inputs for the "from" currency code, "to" currency code, and the amount to convert.
 
@@ -74,13 +74,13 @@ and the amount field requires a non-negative number.
 
 JSTL and EL: Utilizes JSTL <c:if> tags and EL to conditionally display conversion results or error messages.
 
-result.jsp
+### result.jsp
 
 Displaying Results: Shows the original and converted currency amounts, and the currency codes using EL.
 
 Link: Provides a link to return to the index.jsp page for another conversion.
 
-How to Use JSP Pages
+## How to Use JSP Pages
 Input Conversion Details:
 
 Open index.jsp or converter.jsp in your web browser.
@@ -97,12 +97,12 @@ If there is an error (e.g., invalid input format), an error message will be disp
 
 To perform another conversion, click the link provided in result.jsp.
 
-Dependencies
+## Dependencies
 JSTL: Included in the project dependencies to facilitate the use of JSTL tags.
 
 EL: Utilized for accessing and displaying data within the JSP pages.
 
-Summary
+## Summary
 The JSP pages in the Currency Converter application provide a user-friendly interface for inputting and
 displaying currency conversion details. They use JSTL and EL for dynamic content rendering and ensure
 proper validation and error handling for user inputs.
