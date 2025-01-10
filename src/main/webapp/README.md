@@ -39,6 +39,7 @@ The `index.jsp` page serves as the main entry point for the application. It allo
     </div>
 </body>
 </html>
+```
 #### result.jsp
 The result.jsp page displays the results of the currency conversion. It shows the original and converted amounts, along with the currency codes.
 
@@ -62,7 +63,7 @@ The result.jsp page displays the results of the currency conversion. It shows th
     <a href="index.jsp">Convert Another Amount</a>
 </body>
 </html>
-
+```
 ##### Explanation of JSP Pages
 index.jsp
 
