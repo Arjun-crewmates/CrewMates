@@ -21,7 +21,7 @@ public class CurrencyConverterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("converter.jsp").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
     @Override
@@ -34,16 +34,20 @@ public class CurrencyConverterServlet extends HttpServlet {
             amount = Double.parseDouble(request.getParameter("amount"));
         } catch (NumberFormatException e) {
             request.setAttribute("error", "Invalid amount format");
-            request.getRequestDispatcher("converter.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
             return;
         }
 
         try {
             double result = currencyService.convert(from, to, amount);
+            request.setAttribute("from", from);
+            request.setAttribute("to", to);
+            request.setAttribute("amount", amount);
             request.setAttribute("result", result);
+            request.getRequestDispatcher("result.jsp").forward(request, response);
         } catch (IllegalArgumentException e) {
             request.setAttribute("error", e.getMessage());
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("converter.jsp").forward(request, response);
     }
 }
