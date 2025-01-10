@@ -7,9 +7,9 @@
     <h1>Currency Converter</h1>
     <form action="convert" method="post">
         <label>From:</label>
-        <input type="text" name="from" required>
+        <input type="text" name="from" required pattern="[A-Z]{3}">
         <label>To:</label>
-        <input type="text" name="to" required>
+        <input type="text" name="to" required pattern="[A-Z]{3}">
         <label>Amount:</label>
         <input type="number" name="amount" required min="0" step="0.01">
         <button type="submit">Convert</button>
