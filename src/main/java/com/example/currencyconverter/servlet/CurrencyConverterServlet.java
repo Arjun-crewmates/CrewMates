@@ -1,6 +1,8 @@
 package com.example.currencyconverter.servlet;
 
 import com.example.currencyconverter.service.CurrencyService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,14 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Controller
 @WebServlet("/convert")
 public class CurrencyConverterServlet extends HttpServlet {
-    private CurrencyService currencyService;
+    private final CurrencyService currencyService;
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        currencyService = new CurrencyService();
+    @Autowired
+    public CurrencyConverterServlet(CurrencyService currencyService) {
+        this.currencyService = currencyService;
     }
 
     @Override
