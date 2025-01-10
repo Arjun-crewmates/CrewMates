@@ -126,9 +126,9 @@ Unit Tests
 CurrencyServiceTest.java
 The CurrencyServiceTest class contains unit tests for the CurrencyService. These tests verify the correctness of the currency conversion logic and the handling of various edge cases.
 
-Location: src/test/java/com/example/currencyconverter/service/CurrencyServiceTest.java
+**Location:** `src/test/java/com/example/currencyconverter/service/CurrencyServiceTest.java`
 
-Code:
+**Code:**
 
 ``` java
 package com.example.currencyconverter.service;
